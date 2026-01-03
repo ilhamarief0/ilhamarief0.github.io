@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Ilham Arief</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    
+
+    <script>
+        (function() {
+            const originalWarn = console.warn;
+            console.warn = function(...args) {
+                if (args[0] && typeof args[0] === 'string' && args[0].includes('cdn.tailwindcss.com')) return;
+                if (args[0] && typeof args[0] === 'string' && args[0].includes('Layout was forced')) return;
+                originalWarn.apply(console, args);
+            };
+        })();
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <script>
@@ -45,6 +55,9 @@
         }
     </script>
     <style>
+        /* Mencegah Flash of Unstyled Content (FOUC) ringan */
+        html { visibility: visible; opacity: 1; }
+        
         .gradient-text {
             background: linear-gradient(to right, #6366f1, #ec4899, #f59e0b);
             background-size: 200% auto;
