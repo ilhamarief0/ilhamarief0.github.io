@@ -92,8 +92,9 @@
                         <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition"></i>
                     </a>
                     <div class="flex gap-4 text-2xl ml-4">
-                        <a href="#" class="text-slate-400 hover:text-accent transition hover:-translate-y-1"><i class="fab fa-github"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-accent2 transition hover:-translate-y-1"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/ilhamarief0" class="text-slate-400 hover:text-accent transition hover:-translate-y-1"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ilham-arief-701524258/" class="text-slate-400 hover:text-accent2 transition hover:-translate-y-1"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/ilhamarief__" class="text-slate-400 hover:text-accent transition hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -232,16 +233,31 @@
              <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent via-accent2 to-accent"></div>
             <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Let's Collaborate!</h2>
             <p class="text-slate-400 text-lg mb-10">Have an interesting idea or project offer? I'm always open to discussion. Send your message now.</p>
-            <a href="mailto:emailanda@example.com" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-accent hover:bg-accent2 rounded-xl shadow-lg shadow-accent/30 hover:shadow-accent2/30">
-                <i class="far fa-envelope mr-3 text-xl"></i>
-                Send Email
-            </a>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:meanhills019@gmail.com" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-accent hover:bg-indigo-500 rounded-xl shadow-lg shadow-accent/30 hover:shadow-indigo-500/30">
+                    <i class="far fa-envelope mr-3 text-xl"></i>
+                    Send Email
+                </a>
+                
+                <a href="https://instagram.com/ilhamarief__" target="_blank" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-accent2 hover:bg-pink-500 rounded-xl shadow-lg shadow-accent2/30 hover:shadow-pink-500/30">
+                    <i class="fab fa-instagram mr-3 text-xl"></i>
+                    Instagram
+                </a>
+            </div>
+
         </div>
     </section>
 
     <footer class="py-8 text-center text-slate-600 text-sm relative z-10">
-        <p>Made with <i class="fas fa-heart text-accent2 mx-1"></i> and Tailwind CSS.</p>
+        <p>&copy; <span id="year"></span> Ilham Arief. All rights reserved.</p>
     </footer>
 
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+        document.getElementById('portfolioYear').textContent = currentYear;
+    </script>
+    
 </body>
 </html>
